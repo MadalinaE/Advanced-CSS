@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2 - Animatie</title>
+    <style>
+        .background {
+            background-color: #050210;
+            height: 400px;
+            width: 500px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .colors {
+            background: linear-gradient(30deg, #fb5dad, #55fb9f, #b97aff);
+            height: 250px;
+            width: 250px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            animation-name: my-animation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+
+        }
+
+        .colors::after {
+            content: '';
+            z-index: 1;
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: 0.3s opacity ease-in-out;
+            filter: blur(15px);
+            opacity: 1;
+            border-radius: 50%;
+            background: linear-gradient(30deg, #fb5dad, #55fb9f, #b97aff);
+        }
+
+        .circle {
+            background-color: #050210;
+            height: 210px;
+            width: 210px;
+            border-radius: 50%;
+            z-index: 2;
+
+        }
+
+        .circle::after {
+            content: '';
+            z-index: 3;
+            position: absolute;
+            background-color: #0e072749;
+            height: 210px;
+            width: 210px;
+            border-radius: 50%;
+
+            animation-name: second-animation;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            transition-timing-function: linear;
+            animation-direction: reverse;
+
+        }
+
+        @keyframes my-animation {
+            10% {
+                transform: rotate(36deg);
+            }
+
+            20% {
+                transform: rotate(72deg);
+            }
+
+            30% {
+                transform: rotate(108deg);
+            }
+
+            40% {
+                transform: rotate(144deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            60% {
+                transform: rotate(216deg);
+            }
+
+            70% {
+                transform: rotate(252deg);
+            }
+
+            80% {
+                transform: rotate(288deg);
+            }
+
+            90% {
+                transform: rotate(324deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+        @keyframes second-animation {
+            0% {
+                transform: scale(0.9, 0.9);
+            }
+
+            10% {
+                transform: scale(0.8, 0.8);
+            }
+
+            20% {
+                transform: scale(0.7, 0.7);
+            }
+
+            30% {
+                transform: scale(0.6, 0.6);
+            }
+
+            40% {
+                transform: scale(0.5, 0.5);
+            }
+
+            50% {
+                transform: scale(0.4, 0.4);
+            }
+
+            60% {
+                transform: scale(0.3, 0.3);
+            }
+
+            70% {
+                transform: scale(0.2, 0.2);
+            }
+
+            80% {
+                transform: scale(0.1, 0.1);
+            }
+
+            100% {
+                transform: scale(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <div class="colors">
+
+            <div class="circle"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

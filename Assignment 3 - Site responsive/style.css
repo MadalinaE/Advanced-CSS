@@ -1,0 +1,61 @@
+body {
+    box-sizing: border-box;
+    font-family: Calibri, "Trebuchet MS", sans-serif;
+    margin: 1vh 3vw;
+    width: 94vw;
+}
+
+.row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(5, minmax(150px, auto));
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    gap: 80px;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+.box {
+    width: auto;
+    background-color: rgb(245, 245, 245);
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px 2px rgb(230, 227, 227);
+}
+
+.row p {
+    text-align: center;
+    margin: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+img {
+    width: 100%;
+    background-color: #6ba2d9;
+    border-radius: 12px 12px 0 0;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+@media screen and (min-width: 1025px) {
+    .row {
+        grid-template-columns: repeat(5, minmax(150px, auto));
+        grid-template-rows: auto auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .row {
+        grid-template-columns: repeat(3, minmax(100px, auto));
+        grid-template-rows: repeat(4, auto);
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .row {
+        grid-template-columns: repeat(1, minmax(150px, auto));
+        grid-template-rows: repeat(10, auto);
+    }
+}
